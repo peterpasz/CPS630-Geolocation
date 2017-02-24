@@ -1,0 +1,190 @@
+* {
+    box-sizing: border-box;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.header{
+		width: 100%;
+}
+
+.c1{
+	margin: 0 auto;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+h1{
+	color: #f2cbbc;
+	text-shadow: 2px 2px #334431; 
+	padding: 20px;
+	margin: 0 0 50px;
+	background-image: url("img/earthBanner.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: left center;
+	width: 100%;
+}
+
+body{
+	color: #f2cbbc;
+	background-color: #062F4F;
+	padding: 0;
+	margin: 0;
+	font-family: 'Raleway', sans-serif;
+	position: relative;
+	padding-bottom: 150px;
+	min-height: 100%;
+}
+
+nav{
+	width: 100%;
+    overflow: hidden;
+    background-color: #334431;
+}
+
+a{
+	display: inline-block;
+	text-align: center;
+	padding: 14px;
+	text-decoration: none;
+	font-size: 17px;
+	color: inherit;
+}
+
+
+a:hover {background-color: #e05038;}
+
+
+aside{
+	padding: 20px;
+}
+
+figcaption{
+	padding: 20px;
+	margin: 0px 0px 50px 0px;
+	background-color: #334431;
+	box-shadow: 10px 10px #e05038;
+	text-justify: inter-word;
+}
+
+.flamingopic{
+	border-radius: 20px;
+	margin: 20px;
+}
+
+.gallery{
+	float: left;
+}
+
+.robo{
+	margin: 20px;
+	border-radius: 50px;
+}
+
+.figblock{
+	display: block;
+}
+
+details{
+	margin: 20px 0px 0px 0px;
+}
+
+img{
+	width: 30%;
+}	
+	
+aside{
+	float: right;
+	background-color: #334431; 
+	height: 100%;
+}
+
+footer{
+	padding: 50px;
+	width: 100%;
+    overflow: hidden;
+    background-color: #334431;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+#mapBoxCurrent{
+	height: 400px;
+	margin:auto;
+	border-color: #445541;
+	border-style: solid;
+	border-width: 20px;
+	border-radius: 0 0 20px 20px;
+}
+
+.dropBoxContainer{
+	background-color: red;
+	background-color: #334431;
+	border-color: #445541;
+	border-style: inset;
+	border-width: 10px;
+}
+
+#dropBox{
+	width: 90%;
+	height: 0;
+	margin: 40px auto 0 auto;
+	padding: 40px 40px 50px 20px;
+	text-align: center;
+	background-color: #334431;
+	border-color: #445541;
+	border-style: inset;
+	border-width: 10px;
+}
+
+#fileInput{
+	margin: 10px;
+}
+
+@media only screen and (min-width: 1440px){
+	/* large monitor */
+	.c1{
+		width: 80%;
+	}
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1439px){
+	/* laptop */
+	.c1{
+		width: 45%;
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px){
+    /* tablets and desktop */
+	.c1{
+		width: 40%;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+    /* phones */
+	.c1{
+		width: 90%;
+	}	
+}
+
+
+

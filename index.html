@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CPS630 Lab 03</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtXyfwXbAM54r33e6JMEaTxRYTcgWtsdw&callback=initMap"></script>
+	<script src="script.js"></script>
+</head>
+
+<body>
+
+
+<header>
+<center>
+<h1>
+Geolocater
+</h1>
+</center>
+</header>
+
+<main>
+
+	<div class="c1 dropBoxContainer">
+		<div id="dropBox">Drop text file here.</div>
+		<center><input id="fileInput" type="file" onchange="processFiles(this.files)"></center>
+	</div>
+	
+	<div id="fileDisplayArea">
+	
+	</div>
+	
+	<div id="mapBoxCurrent" class="c1"></div>
+	
+	<div id="userCoords"></div>
+	
+	<div id="userAddress"></div>
+	
+	<p>Count numbers: <output id="result"></output></p>
+	<button onclick="startWorker()">Start Worker</button> 
+	<button onclick="stopWorker()">Stop Worker</button>
+	
+</main>
+
+
+
+
+
+
+
+
+
+
+<center>
+<footer>
+Peter Paszkiewicz
+</footer>
+</center>
+
+</body>
+
+
+</html>
