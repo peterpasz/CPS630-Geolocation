@@ -126,9 +126,9 @@ function startWorker() {
         if(typeof(distCalc) == "undefined") {
             distCalc = new Worker("haversine.js");
         }
-        distCalc.postMessage({"args": [0, 0, userCoordArray[0], userCoordArray[1]]});
+        distCalc.postMessage({"args": [coordString, userCoordArray[0], userCoordArray[1]]});
 		distCalc.onmessage = function(event) {
-            document.getElementById("result").innerHTML = event.data;
+            document.getElementById("result").innerHTML += "  " + event.data;
         };
 		
     } else {

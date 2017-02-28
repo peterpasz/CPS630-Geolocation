@@ -1,9 +1,8 @@
 var coordA = 0;
 var coordB = 0;
-var coordC = 0;
-var coordD = 0;
-
-
+var coordArray;
+var pointArray;
+var i;
 
 /*
 setTimeout("getDistance()", 500);
@@ -16,22 +15,24 @@ setTimeout("getDistance()", 500);
 */
 
 onmessage = function(event){
-	coordA = event.data.args[0];
-	coordB = event.data.args[1];	
-	coordC = event.data.args[2];
-	coordD = event.data.args[3];	
-	getDistance();
+	coordString = event.data.args[0];
+	coordA = event.data.args[1];	
+	coordB = event.data.args[2];
+	
+	coordArray = coordString.split("\n");
+	for(i=0; i<coordArray.length; i++){
+		console.log(coordArray[i]);
+		pointArray = coordArray[i].split(",");
+		getDistance();
+	}
+	
+	
 }
 
 
 function getDistance() {
-
-	console.log(coordA);
-	console.log(coordB);
-	console.log(coordC);
-	console.log(coordD);
-	
-    postMessage(haversine(coordA,coordB,coordC,coordD));
+	console.log(pointArray[0], pointArray[1]);
+    postMessage(haversine(pointArray[0],pointArray[1],coordA,coordB));
     
 }
 

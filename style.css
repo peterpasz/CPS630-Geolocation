@@ -142,6 +142,10 @@ footer{
 	border-width: 10px;
 }
 
+.dropBoxColumn{
+	display: inline-block;
+}
+
 #dropBox{
 	width: 90%;
 	height: 0;
@@ -185,6 +189,4 @@ footer{
 		width: 90%;
 	}	
 }
-
-
 
