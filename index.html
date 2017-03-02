@@ -29,10 +29,21 @@ Geolocater
 		<div id="dropBox">Drop text file here.</div>
 		<center><input id="fileInput" type="file" onchange="processFiles(this.files)"></center>
 		</div>
+		
 		<div class="dropBoxColumn">
 		<div id="userCoords"></div>	
 		<div id="userAddress"></div>
-		<div id="fileDisplayArea">poo</div>
+		<div id="fileDisplayArea">You have not entered any coordinates.</div>
+		</div>
+		
+		<div class="dropBoxColumnRight">
+		<p>Count numbers: <output id="result"></output></p>
+		<button onclick="startWorker()">Start Worker</button> 
+		<button onclick="stopWorker()">Stop Worker</button>
+		</div>
+		
+		<div>
+		<input type="search">
 		</div>
 	</div>
 	
@@ -41,9 +52,7 @@ Geolocater
 	
 
 	
-	<p>Count numbers: <output id="result"></output></p>
-	<button onclick="startWorker()">Start Worker</button> 
-	<button onclick="stopWorker()">Stop Worker</button>
+
 	
 </main>
 

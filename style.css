@@ -140,10 +140,20 @@ footer{
 	border-color: #445541;
 	border-style: inset;
 	border-width: 10px;
+	display: flex;
+	flex-direction: row;
 }
 
 .dropBoxColumn{
 	display: inline-block;
+	width: 20%;
+	margin; auto;
+}
+
+.dropBoxColumnRight{
+	float: right;
+	width: 20%;
+	margin: auto;
 }
 
 #dropBox{
@@ -160,6 +170,10 @@ footer{
 
 #fileInput{
 	margin: 10px;
+}
+
+#userCoords{
+	padding: 50px 0 0 0;
 }
 
 @media only screen and (min-width: 1440px){
