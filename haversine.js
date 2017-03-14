@@ -4,36 +4,21 @@ var coordArray;
 var pointArray;
 var i;
 
-/*
-setTimeout("getDistance()", 500);
-	self.addEventListener("message", function(event) {
-		coordA = event.data.args[0];
-		coordB = event.data.args[1];	
-		coordC = event.data.args[2];
-		coordD = event.data.args[3];	
-	}, false);
-*/
-
 onmessage = function(event){
 	coordString = event.data.args[0];
 	coordA = event.data.args[1];	
 	coordB = event.data.args[2];
 	
 	coordArray = coordString.split("\n");
+
 	for(i=0; i<coordArray.length; i++){
-		console.log(coordArray[i]);
 		pointArray = coordArray[i].split(",");
 		getDistance();
 	}
-	
-	
 }
 
-
 function getDistance() {
-	console.log(pointArray[0], pointArray[1]);
-    postMessage(haversine(pointArray[0],pointArray[1],coordA,coordB));
-    
+    postMessage({"args": [haversine(pointArray[0],pointArray[1],coordA,coordB), pointArray[0], pointArray[1]]});
 }
 
 function haversine() {

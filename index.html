@@ -3,6 +3,7 @@
 
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8"> 
 	<title>CPS630 Lab 03</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
@@ -16,54 +17,35 @@
 <header>
 <center>
 <h1>
-Geolocater
+GEOLOCATION APPLICATION
 </h1>
 </center>
 </header>
 
 <main>
 
-	<div class="c1 dropBoxContainer">
-
-		<div class="dropBoxColumn">
-		<div id="dropBox">Drop text file here.</div>
-		<center><input id="fileInput" type="file" onchange="processFiles(this.files)"></center>
+	<section class="dropBoxContainer c1">
+		<div class="c1">
+			<input id="fileInput" type="file" placeholder="Coordinates" class="inline" onchange="processFiles(this.files)">
 		</div>
-		
-		<div class="dropBoxColumn">
-		<div id="userCoords"></div>	
+		<div id="dropBox" class="overflowContainer c1">
+			<div id="locations" class="inline">	Drop a text file containing coordinates.</div>
+			<div id="distances" class="inline"></div>
+		</div>
+	</section> 
+	
+	<section class="location c1">
+		<input type="search" placeholder="Latitude" class ="search" id="lat" onsearch="setUserCoords()">
+		<input type="search" placeholder="Longitude" class ="search" id="lon" onsearch="setUserCoords()">
+		<button type="submit" class="searchButton" onclick="setUserCoords()">Update Location </button>
+		<div>You are currently located at </div>
+		<div id="userCoords"></div>		
 		<div id="userAddress"></div>
-		<div id="fileDisplayArea">You have not entered any coordinates.</div>
-		</div>
-		
-		<div class="dropBoxColumnRight">
-		<p>Count numbers: <output id="result"></output></p>
-		<button onclick="startWorker()">Start Worker</button> 
-		<button onclick="stopWorker()">Stop Worker</button>
-		</div>
-		
-		<div>
-		<input type="search">
-		</div>
-	</div>
+	</section>
 	
-
-	<div id="mapBoxCurrent" class="c1"></div>
-	
-
-	
-
+	<section id="mapBoxCurrent" class="c1"></section>
 	
 </main>
-
-
-
-
-
-
-
-
-
 
 <center>
 <footer>

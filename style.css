@@ -31,18 +31,15 @@ html {
 h1{
 	color: #f2cbbc;
 	text-shadow: 2px 2px #334431; 
-	padding: 20px;
-	margin: 0 0 50px;
-	background-image: url("img/earthBanner.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: left center;
+	padding: 50px;
+	margin: 0 0 50px 0;
+	background-color: #334431;
 	width: 100%;
 }
 
 body{
 	color: #f2cbbc;
-	background-color: #062F4F;
+	background-color: #e6af4b;
 	padding: 0;
 	margin: 0;
 	font-family: 'Raleway', sans-serif;
@@ -51,71 +48,8 @@ body{
 	min-height: 100%;
 }
 
-nav{
-	width: 100%;
-    overflow: hidden;
-    background-color: #334431;
-}
-
-a{
-	display: inline-block;
-	text-align: center;
-	padding: 14px;
-	text-decoration: none;
-	font-size: 17px;
-	color: inherit;
-}
-
-
-a:hover {background-color: #e05038;}
-
-
-aside{
-	padding: 20px;
-}
-
-figcaption{
-	padding: 20px;
-	margin: 0px 0px 50px 0px;
-	background-color: #334431;
-	box-shadow: 10px 10px #e05038;
-	text-justify: inter-word;
-}
-
-.flamingopic{
-	border-radius: 20px;
-	margin: 20px;
-}
-
-.gallery{
-	float: left;
-}
-
-.robo{
-	margin: 20px;
-	border-radius: 50px;
-}
-
-.figblock{
-	display: block;
-}
-
-details{
-	margin: 20px 0px 0px 0px;
-}
-
-img{
-	width: 30%;
-}	
-	
-aside{
-	float: right;
-	background-color: #334431; 
-	height: 100%;
-}
-
 footer{
-	padding: 50px;
+	padding: 20px;
 	width: 100%;
     overflow: hidden;
     background-color: #334431;
@@ -126,54 +60,71 @@ footer{
 }
 
 #mapBoxCurrent{
+	color: black;
 	height: 400px;
 	margin:auto;
 	border-color: #445541;
 	border-style: solid;
 	border-width: 20px;
 	border-radius: 0 0 20px 20px;
+	box-shadow: 10px 10px #e05038;
+}
+
+.search {
+    padding:8px 15px;
+	background-color: #333333;
+	color: #f2cbbc;
+	border-color: #445541;
+	border-style: inset;
+	border-width: 10px;
+	width: 200px;
+}
+
+.searchButton{
+	padding:8px 15px;
+    background-color: #333333;
+    color: #f2cbbc;
+    text-align: center;
+    text-decoration: none;
+	border-color: #445541;
+	border-style: inset;
+	border-width: 10px;
+	width: 200px;
+    display: inline-block;
 }
 
 .dropBoxContainer{
 	background-color: red;
-	background-color: #334431;
+	background-color: #445541;
 	border-color: #445541;
-	border-style: inset;
-	border-width: 10px;
-	display: flex;
-	flex-direction: row;
+	border-style: solid;
+	border-width: 20px;
+	border-radius: 20px 20px 0 0;
+	box-shadow: 10px 10px #e05038;
 }
 
-.dropBoxColumn{
+.inline{
 	display: inline-block;
-	width: 20%;
-	margin; auto;
 }
 
-.dropBoxColumnRight{
-	float: right;
-	width: 20%;
-	margin: auto;
-}
-
-#dropBox{
-	width: 90%;
-	height: 0;
-	margin: 40px auto 0 auto;
-	padding: 40px 40px 50px 20px;
-	text-align: center;
-	background-color: #334431;
-	border-color: #445541;
-	border-style: inset;
-	border-width: 10px;
+.overflowContainer{
+	overflow-y: scroll;
+	height: 100px;
+	background-color: #333333;
 }
 
 #fileInput{
 	margin: 10px;
 }
 
-#userCoords{
-	padding: 50px 0 0 0;
+.location{
+	margin: auto;
+	background-color: #445541;
+	border-color: #445541;
+	border-style: solid;
+	border-width: 20px;
+	box-shadow: 10px 0 #e05038;
+	text-align: center;
 }
 
 @media only screen and (min-width: 1440px){
@@ -186,14 +137,14 @@ footer{
 @media only screen and (min-width: 1024px) and (max-width: 1439px){
 	/* laptop */
 	.c1{
-		width: 45%;
+		width: 90%;
 	}
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px){
     /* tablets and desktop */
 	.c1{
-		width: 40%;
+		width: 90%;
 	}
 }
 
